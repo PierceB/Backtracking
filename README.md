@@ -1,2 +1,2 @@
 # Backtracking
-AAA project for the sodoku 
+AAA project for the sudoku 
