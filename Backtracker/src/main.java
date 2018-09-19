@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 
 public class main {
 
@@ -5,11 +6,14 @@ public class main {
 		// TODO Auto-generated method stub
 		
 		
-		Board board = new Board() ;  
-		board.setPoint(0, 0, 4);
-		boolean temp = board.isNumberValid(2, 2,4) ; 
-		System.out.println(temp);
-		
+		Board board = null;
+		try {
+			board = new Board("src/Board.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+		System.out.println(board.isBoardValid());
 		board.printBoard();
 	}
 

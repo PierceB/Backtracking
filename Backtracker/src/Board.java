@@ -1,6 +1,29 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 //This class is for storing the board
 public class Board {
 	public int[][] board ; 
+	
+	public Board(String fileName) throws FileNotFoundException { //Constructor for reading in a board from a text file
+	//the numbers must have spaces between them in the text file, and each row must be on a new line	
+		// read in the data
+		int[][] newboard = new int[9][9] ;
+		Scanner input = new Scanner(new File(fileName));
+		for(int i = 0; i < 9; ++i)
+		{
+		    for(int j = 0; j < 9; ++j)
+		    {
+		        if(input.hasNextInt())
+		        {
+		            newboard[i][j] = input.nextInt();
+		        }
+		    }
+		}
+		input.close();
+		this.board = newboard;
+	}
 	
 	public Board() {            //create a new board with all elements 0
 		int[][] newboard = new int[9][9] ;
@@ -65,6 +88,7 @@ public class Board {
 			segj = Math.floorDiv(j, 3);
 		}
 		
+		
 		for(int counti=3*segi; counti < 3*segi+3; counti++) {       //Check the block if the number repeats
 			for(int countj = 3*segj ; countj < 3*segj + 3 ; countj++) {
 				if(counti!=i || countj!=j) {
@@ -81,6 +105,9 @@ public class Board {
 	
 	public void setPoint(int i,int j, int number) {  //set a point on the board to a number
 	//sets a the ith row and jth column to number;
+		if(number<0 || number>9) {
+			return;
+		}
 		this.board[i][j] = number ;
 	}
 	
@@ -94,4 +121,17 @@ public class Board {
 			System.out.println("");
 		}
 	}
+
+	public boolean isBoardValid() {
+	//This method checks if the board is valid	
+	for(int i = 0; i<9 ; i++) {
+		for(int k= 0 ; k<9 ; k++) {
+			if(!isPointValid(i,k)) {
+				return(false);
+			}
+		}
+	}return(true) ; 
+		
+	}
+
 }
