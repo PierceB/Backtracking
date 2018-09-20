@@ -10,7 +10,7 @@ Backtracking is nothing but the modified process of the brute force approach whe
 
 
 Algorithm Backtrack(v<sub>1</sub>,V<sub>i</sub>) 
-
+'''
 if(V<sub>1</sub>,...,V<sub>i</sub>) is a Solution Then 
 
       Return (V<sub>1</sub>,...,V<sub>i</sub>) 
@@ -32,3 +32,4 @@ for each v DO
 end 
 
 Return ()
+'''
