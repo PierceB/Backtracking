@@ -9,7 +9,7 @@ Backtracking is nothing but the modified process of the brute force approach whe
 - Basically the process is used when the problem has a number of options just one solution have to be selected. After having a new option set means recursion, the procedure is repeated over and over until final stage.
 
 
-Algorithm Backtrack(v_1,V_i) \newline
+Algorithm Backtrack(v_1,V_i) \\
 if(V_1,...,V_i) is a Solution Then \newline
       Return (V_1,...,V_i) \newline
 for each v DO \newline
