@@ -8,9 +8,9 @@ Backtracking is nothing but the modified process of the brute force approach whe
 - Backtracking systematically try and search possibilities to find the solution. Also it is an important process for solving constraint satisfication problem like crossword,Sudoku and many other puzzles. It can be more continent technique for parsing other combinatorial optimization problem.
 - Basically the process is used when the problem has a number of options just one solution have to be selected. After having a new option set means recursion, the procedure is repeated over and over until final stage.
 
-
+```java
 Algorithm Backtrack(v<sub>1</sub>,V<sub>i</sub>) 
-'''
+
 if(V<sub>1</sub>,...,V<sub>i</sub>) is a Solution Then 
 
       Return (V<sub>1</sub>,...,V<sub>i</sub>) 
@@ -32,4 +32,4 @@ for each v DO
 end 
 
 Return ()
-'''
+```
