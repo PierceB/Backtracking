@@ -9,17 +9,17 @@ Backtracking is nothing but the modified process of the brute force approach whe
 - Basically the process is used when the problem has a number of options just one solution have to be selected. After having a new option set means recursion, the procedure is repeated over and over until final stage.
 
 ```java
-Algorithm Backtrack(v<sub>1</sub>,V<sub>i</sub>) 
+Algorithm Backtrack(v_1,V_i) 
 
-if(V<sub>1</sub>,...,V<sub>i</sub>) is a Solution Then 
+if(V_1,...,V_i) is a Solution Then 
 
-      Return (V<sub>1</sub>,...,V<sub>i</sub>) 
+      Return (V_1,...,V_i) 
       
 for each v DO 
 
-  if (V<sub>1</sub>,...,V<sub>i</sub>) is acceptable vector THEN 
+  if (V_1],...,V_i) is acceptable vector THEN 
   
-      sol = try(V<sub>1</sub>,...,V<sub>i</sub>,V) 
+      sol = try(V_1,...,V_i,V) 
       
       if sol != () Then 
       
