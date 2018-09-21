@@ -61,7 +61,9 @@ public class Board {
 		boolean result = true ;
 		int number= board[i][j] ; 
 		int segi=0 , segj = 0;
-		
+		if(number==0) {
+			return(false);
+		}
 		
 		for(int count=0 ;count < 9 ; count++) {  //Checks down a column
 			if(count!=i) {
@@ -133,5 +135,23 @@ public class Board {
 	}return(true) ; 
 		
 	}
+	
+	public int[] nextPoint(){ // This function finds the coordinates of the next point which is needed to be solved
+		for(int i=0; i<9;i++) {
+			for(int k=0; k<9 ; k++) {
+				if(board[i][k]==0) {
+					int[] temp = new int[2] ;
+					temp[0]=i;
+					temp[1]=k ;
+					return(temp) ;
+				}
+			}
+		}
+		int[] temp = new int[2] ;
+		temp[0]=-1;
+		temp[1]=-1 ;
+		return(temp) ;
+	}
 
+	
 }
