@@ -6,8 +6,8 @@ public class Program {
 
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
-        String str = in.nextLine();
-        checkValid check = new checkValid();
+       // String str = in.nextLine();
+       /* checkValid check = new checkValid();
         try {
             check.makeFile(str);
         } catch (IOException e) {
@@ -19,9 +19,9 @@ public class Program {
             board = new Board("src/inputFile.txt");
         }catch (FileNotFoundException e){
             e.printStackTrace();
-        } 
+        }*/ 
         
-       /* int[][] tempboard=new int[9][9];
+        int[][] tempboard=new int[9][9];
         
         for(int i=0; i<9;i++) {
         	String str = in.nextLine();
@@ -33,7 +33,7 @@ public class Program {
         	}
         }
         
-        Board board = new Board(tempboard);*/
+        Board board = new Board(tempboard);
         
         //System.out.println(board.isBoardValid());
         solveBoard(board);
